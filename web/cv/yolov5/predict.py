@@ -6,7 +6,11 @@ import cv2
 import torch
 import torch.backends.cudnn as cudnn
 
-sys.path.insert(0, os.getcwd()+'/web/cv/yolov5/') # location of src
+FILE = Path(__file__).resolve()
+ROOT = FILE.parents[0]  # YOLOv5 root directory
+if str(ROOT) not in sys.path:
+    sys.path.append(str(ROOT))  # add ROOT to PATH
+ROOT = Path(os.path.relpath(ROOT, Path.cwd()))  # relative
 
 # local
 from models.common import DetectMultiBackend
@@ -98,7 +102,7 @@ def run(weights=None,  # model.pt path(s)
 
             p = Path(p)  # to Path
             #save_path = str(save_dir / p.name) # im.jpg
-            save_path = str(save_dir) + '/' + 'mpeg_' + str(p.name)  # im.jpg
+            save_path = str(save_dir) + '/' + 'predicted_' + str(p.name)  # im.jpg
             s += '%gx%g ' % im.shape[2:]  # print string
             gn = torch.tensor(im0.shape)[[1, 0, 1, 0]]  # normalization gain whwh
             annotator = Annotator(im0, line_width=line_thickness, example=str(names))
@@ -124,22 +128,14 @@ def run(weights=None,  # model.pt path(s)
             LOGGER.info(f'{s}Done. ({t3 - t2:.3f}s)')
 
             # Save results (with detections)
-            im0 = annotator.result()
-            if vid_path[i] != save_path:  # new video
-                vid_path[i] = save_path
-                if isinstance(vid_writer[i], cv2.VideoWriter):
-                    vid_writer[i].release()  # release previous video writer
-                if vid_cap:  # video
-                    fps = vid_cap.get(cv2.CAP_PROP_FPS)
-                    w = int(vid_cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-                    h = int(vid_cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-                vid_writer[i] = cv2.VideoWriter(save_path, cv2.VideoWriter_fourcc(*'mp4v'), fps, (w, h))
-            vid_writer[i].write(im0)
+            if save_img:
+                if dataset.mode == 'image':
+                    cv2.imwrite(save_path, im0)
 
     # Print results
     t = tuple(x / seen * 1E3 for x in dt)  # speeds per image
     LOGGER.info(f'Speed: %.1fms pre-process, %.1fms inference, %.1fms NMS per image at shape {(1, 3, *imgsz)}' % t)
-    LOGGER.info(f"Video saved to: {save_path}")
+    LOGGER.info(f"File saved to: {save_path}")
 
 
 if __name__ == "__main__":

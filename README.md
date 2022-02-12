@@ -13,8 +13,8 @@ $ # Virtualenv modules installation (Windows based systems)
 $ # virtualenv env
 $ # .\env\Scripts\activate
 $
-$ # Install modules - SQLite Storage
-$ pip3 install -r requirements.txt
+$ # Install modules
+$ pip3 install -r requirements.txt -f https://download.pytorch.org/whl/torch_stable.html
 $
 $ # Create tables
 $ python manage.py makemigrations
