@@ -3,6 +3,8 @@ from django.http import HttpResponse
 
 #from .models import PredictionFile
 from .forms import Form
+from .yolov5.predict import run
+
 
 def home(request):
     return render(request, 'home.html')
@@ -21,3 +23,6 @@ def cv(request):
     context['form'] = form
 
     return render(request, 'model.html', context)
+
+def predict(pk):
+    pass
