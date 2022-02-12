@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %} загрузка и предсказание {% endblock %} 
+
+{% block content %}
+
+<div class="row">
+    <div id="buttonzone">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <button class="btn" type="submit">Детектировать мусор</button>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
