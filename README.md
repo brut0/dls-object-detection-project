@@ -1,8 +1,25 @@
-# dls-object-detection-project
+# Garbage Detection DLS Final Project  
+
 Final project of 1 semester of Deep Learning School (advanced)
 
 
-## How to use it
+## Project structure
+
+    ├── wevb                    # Site
+    │   ├── cv                  # Main logic and YOLOv5 inference
+    │   ├── static              # Required images and css
+    │   ├── templates           # HTML templates
+    │   └── web                 # Core of Django
+    ├── yolov5_train.ipynb      # Jupyter Notebook with train YOLOv5 code
+    ├── taco2.yaml              # Config of YOLOv5 training
+    ├── taco2_test.yaml         # Config of YOLOv5 testing
+    ├── requirements.txt        # Required dependeсies
+    └── README.md  
+
+__В случае если Jupyter Notebook не отображается на GitHub [смотри тут](https://nbviewer.org/github/brut0/dls-object-detection-project/blob/main/yolov5_train.ipynb)__
+
+
+## How to localy run site
 
 ```bash
 $ # Virtualenv modules installation (Unix based systems)
@@ -30,4 +47,6 @@ $ # python manage.py runserver 0.0.0.0:<your_port>
 $
 $ # Access the web app in browser: http://127.0.0.1:8000/
 
-Or got to:<a href="http://46.30.42.182:8000">46.30.42.182</a> 
+
+## URL of site in Web
+Go to: <a href="http://46.30.42.182:8000">46.30.42.182</a> 
