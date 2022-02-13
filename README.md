@@ -14,7 +14,7 @@ $ # virtualenv env
 $ # .\env\Scripts\activate
 $
 $ # Install modules
-$ pip3 install -r requirements.txt -f https://download.pytorch.org/whl/torch_stable.html
+$ pip3 install -r requirements.txt
 $
 $ # Create tables
 $ python manage.py makemigrations
