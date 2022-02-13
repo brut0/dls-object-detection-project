@@ -20,6 +20,8 @@ $ # Create tables
 $ python manage.py makemigrations
 $ python manage.py migrate --run-syncdb
 $
+$ # Create config.py with SECRET_KEY and ALLOWED_HOSTS
+$
 $ # Start the application (development mode)
 $ python manage.py runserver # default port 8000
 $

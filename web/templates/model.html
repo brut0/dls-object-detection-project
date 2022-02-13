@@ -14,4 +14,19 @@
     </div>
 </div>
 
+<br><br>
+
+{% if image %}
+<div style="width:50%;">
+    <table align=center>
+        <tr>
+            <td>
+                <img src="{{ image }}" alt="Image with predictions" width="640">
+                <br>
+            </td>
+        </tr>
+    </table>
+</div>
+{% endif %}
+
 {% endblock content %}
