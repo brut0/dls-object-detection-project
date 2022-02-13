@@ -2,10 +2,12 @@
 
 Final project of 1 semester of Deep Learning School (advanced)
 
+## URL of site in Web
+Go to: <a href="http://46.30.42.182:8000">46.30.42.182</a> 
 
 ## Project structure
 
-    ├── wevb                    # Site
+    ├── web                     # Site
     │   ├── cv                  # Main logic and YOLOv5 inference
     │   ├── static              # Required images and css
     │   ├── templates           # HTML templates
@@ -16,7 +18,7 @@ Final project of 1 semester of Deep Learning School (advanced)
     ├── requirements.txt        # Required dependeсies
     └── README.md  
 
-__В случае если Jupyter Notebook не отображается на GitHub [смотри тут](https://nbviewer.org/github/brut0/dls-object-detection-project/blob/main/yolov5_train.ipynb)__
+*В случае если Jupyter Notebook не отображается на GitHub [смотри тут](https://nbviewer.org/github/brut0/dls-object-detection-project/blob/main/yolov5_train.ipynb)*
 
 
 ## How to localy run site
@@ -46,7 +48,4 @@ $ # Start the app - custom port
 $ # python manage.py runserver 0.0.0.0:<your_port>
 $
 $ # Access the web app in browser: http://127.0.0.1:8000/
-
-
-## URL of site in Web
-Go to: <a href="http://46.30.42.182:8000">46.30.42.182</a> 
+```
