@@ -3,7 +3,7 @@
 Final project of 1 semester of Deep Learning School (advanced)
 
 ## URL of site in Web
-Go to: <a href="http://46.30.42.182:8000">46.30.42.182</a> 
+Go to: <a href="http://sergeyzemskov.ru/">sergeyzemskov.ru</a>
 
 ## Project structure
 
@@ -34,6 +34,7 @@ $ # .\env\Scripts\activate
 $
 $ # Install modules
 $ pip3 install -r requirements.txt
+$ apt update && apt install -y libsm6 libxext6 libxrender-dev
 $
 $ # Create tables
 $ python manage.py makemigrations
@@ -49,3 +50,10 @@ $ # python manage.py runserver 0.0.0.0:<your_port>
 $
 $ # Access the web app in browser: http://127.0.0.1:8000/
 ```
+
+## Example of prediction  
+
+
+<p align="center">
+  <img src="https://i.ibb.co/4tyws9R/Screenshot-2022-06-27-121336.png" width="800" title="trash bottle prediction">
+</p>
