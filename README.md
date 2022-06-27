@@ -57,3 +57,8 @@ $ # Access the web app in browser: http://127.0.0.1:8000/
 <p align="center">
   <img src="https://i.ibb.co/4tyws9R/Screenshot-2022-06-27-121336.png" width="800" title="trash bottle prediction">
 </p>
+
+
+### Possible errors
+`MemoryError` when installing libs:
+$ pip3 install --no-cache-dir -r requirements.txt
