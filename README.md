@@ -58,6 +58,10 @@ $ # Access the web app in browser: http://127.0.0.1:8000/
   <img src="https://i.ibb.co/4tyws9R/Screenshot-2022-06-27-121336.png" width="800" title="trash bottle prediction">
 </p>
 
+<p align="center">
+  <img src="https://i.ibb.co/dJRfTHC/photo-2022-06-27-18-08-17.jpg" width="640" title="trash bottle prediction mobile">
+</p>
+
 
 ### Possible errors
 `MemoryError` when installing libs:
