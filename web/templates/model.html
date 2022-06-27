@@ -4,6 +4,9 @@
 
 {% block content %}
 
+<br>
+
+{% if not image %}
 <div class="row">
     <div id="buttonzone">
         <form method="post" enctype="multipart/form-data">
@@ -13,12 +16,18 @@
         </form>
     </div>
 </div>
+{% endif %}
 
-<br><br>
+<br>
 
 {% if image %}
-<div style="width:50%;">
+<div style="width:100%;">
     <table align=center>
+        <thead>
+            <tr>
+                <th colspan="1" align=left style="color: white;">РЕЗУЛЬТАТ:</th>
+            </tr>
+        </thead>
         <tr>
             <td>
                 <img src="{{ image }}" alt="Image with predictions" width="640">
