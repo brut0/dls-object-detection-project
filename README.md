@@ -64,5 +64,5 @@ $ # Access the web app in browser: http://127.0.0.1:8000/
 
 
 ### Possible errors
-`MemoryError` when installing libs:
+`MemoryError` when installing libs:  
 $ pip3 install --no-cache-dir -r requirements.txt
